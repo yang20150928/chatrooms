@@ -8,7 +8,7 @@ function processUserInput(chatApp, socket) {
   var message = $('#send-message').val();
   var systemMessage;
 
-  if (message.chatAt(0) == '/') {
+  if (message.charAt(0) == '/') {
     ststemMessage = chatApp.processCommand(message);
     if (systemMessage) {
       $('#messages').append(divSystemContentElement(systemMessage));
